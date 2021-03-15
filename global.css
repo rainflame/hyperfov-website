@@ -9,7 +9,7 @@ h1, h2, p, img{
 }
 
 h1 {
-    margin-top:  70px;
+    margin-top:  0;
 }
 
 p {
@@ -24,7 +24,7 @@ h2 {
     font-family: sans-serif;
     padding: 20px;
     font-size: 1.3rem;
-    /* max-width: 600px; */
+    max-width: 2000px;
     margin: 0 auto;
     color: rgb(235, 235, 235);
     background-color: rgb(22, 22, 22);
@@ -36,11 +36,11 @@ h2 {
   }
   
   .header {
-    font-size: 20vw;
+    font-size: 21.5vw;
     font-weight: 900;
     font-style: italic;
     padding-bottom: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 0;
   }
 
@@ -68,16 +68,28 @@ h2 {
       font-size: 3rem;
   }
 
-  /* .left > img {
-      display: block;
-      width: 275px;
-     margin: 40px auto;
-
-  } */
-
   .right {
     grid-column: 2 / 3;
     padding: 20px;
+  }
+
+
+  @media (max-width: 720px) {
+    .side-by-side {
+        grid-template-columns: 1fr;
+    }
+    .right {
+        grid-column: 1 / 2;
+      }
+
+      .header {
+        font-size: 20vw;
+       
+      }
+
+      .small-hidden {
+          display: none;
+      }
   }
 
   .dot {
